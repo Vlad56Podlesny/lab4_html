@@ -1,0 +1,16 @@
+body { font-family: "Times New Roman", serif; font-size: 18px; margin: 24px; }
+h1 { font-size: 28px; }
+/* 3.1. Селектор тегу: всі посилання меню фіолетові. */
+a { color: purple; }
+/* 3.2. Селектор класу: лише головні посилання зелені. */
+.main-link { color: green; }
+/* 3.5. Комбінатор нащадків трьох тегів: лише вкладені ul. */
+ul li ul { list-style-type: none; }
+/* 3.3–3.4. Клас специфічніший за три теги: ягоди залишаються
+   квадратами, овочі — піктограмами, а фрукти без маркерів (як у зразку). */
+.berries { list-style-type: square; }
+.vegetables { list-style-image: url("../../img/check.svg"); }
+/* 3.6. Нащадки класу: прибираємо підкреслення лише в ягід. */
+.berries a { text-decoration: none; }
+/* 3.7. Чотири нумеровані пункти по 50 слів, нумерація всередині. */
+ol { list-style-position: inside; }

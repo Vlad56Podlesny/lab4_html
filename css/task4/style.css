@@ -1,0 +1,29 @@
+/* Кожне правило відповідає номеру вимоги завдання 4.
+   Не додаємо загальних стилів span/p, щоб не зачепити контрольні елементи. */
+
+/* 4.1. Нащадки класу: клас text-background в оригіналі стоїть лише на p. */
+.text-background span {
+    font-style: italic;
+    font-weight: bold;
+    text-decoration: underline;
+}
+/* 4.2. Тег → клас → тег: будь-яка глибина вкладеності. */
+div .text-background span { background-color: yellow; }
+/* 4.3. span усередині іншого span. */
+span span { background-color: gray; text-decoration: line-through; }
+/* 4.4. Три теги: тільки вкладені span у нумерованому списку. */
+ol span span { font-size: 18px; text-transform: uppercase; }
+/* 4.5. Лише безпосередні дочірні абзаци section. */
+section > p { text-shadow: 3px 3px 5px #8392a5; text-indent: 50px; }
+/* 4.6. Безпосередній ul усередині li. Шлях відносно цього CSS. */
+li > ul { list-style-image: url("../../img/check.svg"); }
+/* 4.7. Клас text-background задано абзацам, прямим дітям div. */
+div > .text-background { word-spacing: 50px; }
+/* 4.8. Безпосередні абзаци div з класом text-bold. */
+.text-bold > p { font-weight: bold; }
+/* 4.9. Два рівні прямих дітей. */
+.text-bold > section > p { line-height: 45px; }
+/* 4.10. Тільки перший абзац безпосередньо після img. */
+img + p { background-color: brown; }
+/* 4.11. Усі наступні абзаци-сусіди section. */
+section ~ p { color: red; }
